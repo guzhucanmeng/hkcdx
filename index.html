@@ -9,22 +9,6 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-            font-size: 16px;
         }
         .btn {
             display: inline-block;
@@ -34,47 +18,23 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 16px;
-        }
-        .btn:hover {
-            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>请在浏览器中打开</h1>
-        <p>检测到您正在使用微信访问，微信内置浏览器可能无法正常加载页面。</p>
-        <p>请点击下方按钮，在手机浏览器中打开此网站。</p>
-        <a href="https://chinahacker.us.kg" class="btn">在浏览器中打开</a>
-        <p>如果无法跳转，请手动复制以下链接到浏览器：</p>
-        <p><strong>https://chinahacker.us.kg</strong></p>
-    </div>
+    <h1>请点击下方按钮在浏览器中打开</h1>
+    <p>由于微信限制，请复制链接并在浏览器中访问，或点击下方按钮跳转。</p>
+    <a href="https://chinahacker.us.kg" class="btn">在浏览器中打开</a>
+    <p>如果无法跳转，请手动复制以下链接到浏览器：</p>
+    <p><strong>https://chinahacker.us.kg</strong></p>
 
     <script>
-        // 检测是否在微信中打开
+        // 尝试自动跳转（部分浏览器可能不支持）
         var isWeChat = /MicroMessenger/i.test(navigator.userAgent);
         if (isWeChat) {
-            // 如果在微信中打开，显示提示信息
-            document.body.innerHTML = `
-                <div class="container">
-                    <h1>请在浏览器中打开</h1>
-                    <p>检测到您正在使用微信访问，微信内置浏览器可能无法正常加载页面。</p>
-                    <p>请点击下方按钮，在手机浏览器中打开此网站。</p>
-                    <a href="https://chinahacker.us.kg" class="btn">在浏览器中打开</a>
-                    <p>如果无法跳转，请手动复制以下链接到浏览器：</p>
-                    <p><strong>https://chinahacker.us.kg</strong></p>
-                </div>
-            `;
+            alert("请点击右上角菜单，选择在浏览器中打开。");
         } else {
-            // 如果不在微信中打开，正常显示网站内容
-            document.body.innerHTML = `
-                <div class="container">
-                    <h1>欢迎访问 chinahacker.us.kg</h1>
-                    <p>这是您的网站主页内容。</p>
-                    <p>请随意浏览！</p>
-                </div>
-            `;
+            window.location.href = "https://chinahacker.us.kg";
         }
     </script>
 </body>
